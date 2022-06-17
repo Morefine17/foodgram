@@ -34,6 +34,7 @@ jobs:
         host: ${{ secrets.HOST }}
         username: ${{ secrets.USER }}
         key: ${{ secrets.SSH_KEY }}
+        passphrase: ${{ secrets.PASSPHRASEE }}
         script: |
           sudo rm -rf foodgram/
           mkdir -p foodgram/
@@ -45,7 +46,8 @@ jobs:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USER }}
           privateKey: ${{ secrets.SSH_KEY }}
-
+          passphrase: ${{ secrets.PASSPHRASEE }}
+          
   build_and_push_to_docker_hub:
     name: Push Docker image to Docker Hub
     runs-on: ubuntu-latest
