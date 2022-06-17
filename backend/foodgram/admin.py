@@ -157,5 +157,3 @@ class SubscriptionAdmin(ImportExportModelAdmin):
         'user__username', 'user__last_name',
         'author__username', 'author__last_name'
     )
-
-

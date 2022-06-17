@@ -1,7 +1,7 @@
 from django.shortcuts import get_object_or_404
-from rest_framework import serializers
 from foodgram.models import (FavouriteList, Ingredient, IngredientAmount,
                              Recipe, ShoppingList, Subscription, Tag)
+from rest_framework import serializers
 from users.models import User
 
 from .fields import Base64ImageField
@@ -308,4 +308,3 @@ class SubscriptionSerializer(serializers.ModelSerializer):
                 {'errors': 'Вы уже подписаны на этого пользователя!'},
             )
         return {'user': user, 'author': author}
-
