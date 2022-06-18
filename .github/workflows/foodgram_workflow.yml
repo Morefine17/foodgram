@@ -100,7 +100,7 @@ jobs:
             echo DB_HOST=${{ secrets.DB_HOST }} >> .env
             echo DB_PORT=${{ secrets.DB_PORT }} >> .env
             echo SECRET_KEY=${{ secrets.SECRET_KEY }} >> .env
-
+            
             sudo docker-compose stop
             sudo docker-compose rm -f foodgram-backend
             sudo docker rmi -f ${{ secrets.DOCKER_USERNAME }}/foodgram_backend
