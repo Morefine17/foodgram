@@ -106,7 +106,6 @@ jobs:
             sudo docker-compose stop
             sudo docker-compose rm -f foodgram-backend
             sudo docker-compose up -d
-
   send_message:
     runs-on: ubuntu-latest
     needs: deploy
