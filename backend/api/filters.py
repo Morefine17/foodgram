@@ -4,7 +4,6 @@ from foodgram.models import Ingredient, Recipe
 
 class IngredientFilter(FilterSet):
     """Filter for ingredients."""
-
     name = filters.CharFilter(field_name='name', lookup_expr='startswith')
 
     class Meta:
