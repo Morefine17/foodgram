@@ -1,13 +1,15 @@
 import os
+import environ
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
+env = environ.Env()
 
 SECRET_KEY = os.getenv('SECRET_KEY', default="secret_key")
 
 DEBUG = False
 
-ALLOWED_HOSTS = os.getenv('ALLOWED_HOST').split(' ')
+ALLOWED_HOSTS = env.list("ALLOWED_HOSTS")
 
 
 # Application definiton
