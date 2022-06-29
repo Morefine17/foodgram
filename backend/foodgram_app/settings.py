@@ -1,15 +1,17 @@
 import os
 
+import environ
+
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-
+env = environ.Env(ALLOWED_HOSTS=(list, []))
 SECRET_KEY = os.getenv('SECRET_KEY', default="secret_key")
 
 DEBUG = False
 
-ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS").split()
+ALLOWED_HOSTS = env.list('ALLOWED_HOSTS')
 
-# Application definitionn
+# Application definition
 
 INSTALLED_APPS = [
     'django.contrib.admin',
