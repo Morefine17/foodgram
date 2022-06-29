@@ -44,7 +44,7 @@ class CustomBaseModel(models.Model):
 
     class Meta:
         abstract = True
-        ordering = ('-date_modified')
+        ordering = ('-date_modified',)
 
     def __str__(self):
         return f'{self.name} - {self.author}'

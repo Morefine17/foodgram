@@ -5,12 +5,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 SECRET_KEY = os.getenv('SECRET_KEY', default="secret_key")
 
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = [
-    '51.250.111.226',
-    '127.0.0.1', 'localhost'
-]
+ALLOWED_HOSTS = os.environ.get(
+    'ALLOWED_HOSTS', default='localhost').split(', ')
 
 
 # Application definition
