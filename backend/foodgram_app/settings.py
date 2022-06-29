@@ -7,11 +7,7 @@ SECRET_KEY = os.getenv('SECRET_KEY', default="secret_key")
 
 DEBUG = False
 
-ALLOWED_HOSTS = [
-    '51.250.111.226',
-    '127.0.0.1', 'localhost'
-]
-
+ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS").split()
 
 # Application definition
 
