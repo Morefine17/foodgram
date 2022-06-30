@@ -10,7 +10,7 @@ DEBUG = True
 ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', default="localhost").split(' ')
 
 
-# Application definition
+# Application definitionn
 
 INSTALLED_APPS = [
     'django.contrib.admin',
