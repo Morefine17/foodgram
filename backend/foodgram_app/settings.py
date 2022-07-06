@@ -7,7 +7,7 @@ SECRET_KEY = os.getenv('SECRET_KEY', default="secret_key")
 
 DEBUG = False
 
-ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', default="51.250.111.226").split(' ')
+ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', default="pelmewka.hopto.org").split(' ')
 
 
 # Application definitionn
