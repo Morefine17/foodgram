@@ -33,8 +33,8 @@ docker-compose exec backend python manage.py collectstatic --no-input
 http://pelmewka.hopto.org/
 
 ## superuser
-Admin@Admin.ru
-AdminArtem
+nico@nico.ru
+niconico
 
 ### Author
  Frolov Vasily
